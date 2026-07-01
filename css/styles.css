@@ -155,9 +155,11 @@ section { padding: 5rem 1.5rem; }
   background: white; border-radius: 20px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   overflow: hidden;
-  display: grid; grid-template-columns: 280px 1fr;
+  display: grid; grid-template-columns: 260px 1fr;
+  align-items: start;
 }
-.history-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 260px; }
+.history-card-img { align-self: stretch; background: #1a1a1a; display: flex; align-items: center; }
+.history-card-img img { width: 100%; display: block; object-fit: contain; }
 .history-card-body { padding: 2rem 2rem 2rem; }
 .history-year {
   font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
