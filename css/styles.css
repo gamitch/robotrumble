@@ -208,6 +208,31 @@ footer {
 footer a { color: var(--gold); text-decoration: none; }
 footer strong { color: white; }
 
+/* LIVESTREAM THUMBNAIL */
+.livestream {
+  display: block; position: relative; margin-top: 1.25rem;
+  border-radius: 10px; overflow: hidden; text-decoration: none;
+  border: 2px solid rgba(245,166,35,0.3);
+  transition: border-color 0.2s, transform 0.15s;
+}
+.livestream:hover { border-color: var(--gold); transform: translateY(-2px); }
+.livestream img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
+.livestream-play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%);
+  font-size: 2rem; color: white;
+  background: rgba(0,0,0,0.6); border: 2px solid rgba(255,255,255,0.8);
+  width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+.livestream:hover .livestream-play { background: var(--gold); border-color: var(--gold); color: #111; }
+.livestream-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  color: white; font-size: 0.8rem; font-weight: 600;
+  padding: 1.5rem 0.75rem 0.6rem; text-align: center; letter-spacing: 0.04em;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--dark); padding: 1rem 2rem 1.5rem; gap: 1rem; }
