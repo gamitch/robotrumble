@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "rumbleraceway",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "/Users/georgemitchom/Downloads/rumbleraceway", "-p", "3458"],
+      "port": 3458
+    }
+  ]
+}
