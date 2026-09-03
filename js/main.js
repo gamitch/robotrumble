@@ -1,12 +1,14 @@
 // Mobile nav toggle
 const hamburger = document.querySelector('.nav-hamburger');
 const navLinks = document.querySelector('.nav-links');
-if (hamburger) {
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+if (hamburger && navLinks) {
+  const setOpen = (open) => {
+    navLinks.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+  };
+  hamburger.addEventListener('click', () => setOpen(!navLinks.classList.contains('open')));
   document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-      navLinks.classList.remove('open');
-    }
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) setOpen(false);
   });
 }
 
